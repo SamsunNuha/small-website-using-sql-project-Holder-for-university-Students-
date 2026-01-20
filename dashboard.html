@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAS Scholar - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">
+            <div class="logo-icon small">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <span class="brand-text primary-text">FAS scholar</span>
+        </div>
+
+        <div class="user-profile">
+            <div class="user-info">
+                <span class="user-name" id="welcomeName">student</span>
+                <span class="user-role">STUDENT</span>
+            </div>
+            <a href="index.html" class="logout-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <div class="dashboard-header">
+            <div class="header-text">
+                <h1>My Topics</h1>
+                <p>Manage and track your project submissions.</p>
+            </div>
+            <a href="submit_project.html" class="btn-new-topic" style="text-decoration: none;">
+                <span class="plus-icon">+</span> Submit New Topic
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" stroke="#999"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <input type="text" placeholder="Search your projects...">
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+            <!-- Project Card 1 (Static as requested/restored) -->
+            <div class="project-card">
+                <div class="card-status pending">PENDING</div>
+                <h3>Smart Library System</h3>
+                <p class="card-desc">An automated library system using RFID.</p>
+
+                <div class="card-divider"></div>
+
+                <div class="key-features">
+                    <div class="feature-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>KEY FEATURES</span>
+                    </div>
+                    <div class="feature-list">
+                        - RFID Tracking - Auto Check-out - Fine Calculation
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="card-status pending">PENDING</div>
+                <h3>Online Voting System</h3>
+                <p class="card-desc">Secure voting platform using blockchain.</p>
+
+                <div class="card-divider"></div>
+
+                <div class="key-features">
+                    <div class="feature-header">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>KEY FEATURES</span>
+                    </div>
+                    <div class="feature-list">
+                        - Blockchain Security - Anonymous Voting - Real-time Results
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Records Table -->
+        <div class="records-container">
+            <div class="records-header">
+                <h2>Project Records</h2>
+                <p>Overview of all student project titles.</p>
+            </div>
+            <div class="table-wrapper">
+                <table class="records-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Project Title</th>
+                        </tr>
+                    </thead>
+                    <tbody id="globalRecordsBody">
+                        <!-- Data will be loaded here -->
+                        <tr>
+                            <td colspan="2" style="text-align:center; padding: 2rem; color: #666;">Loading records...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
