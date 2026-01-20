@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAS Scholar - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Side -->
+        <div class="left-panel">
+            <div class="brand">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="brand-text">FAS scholar</span>
+            </div>
+
+            <div class="hero-content">
+                <h1>Where <br>academic ideas <br>take flight.</h1>
+                <p>Submit your research topics, get faculty approval, and track your academic progress in one beautiful
+                    dashboard.</p>
+            </div>
+
+            <div class="footer-copy">
+                &copy; 2026 Faculty of Applied Sciences - SEUSL
+            </div>
+        </div>
+
+        <!-- Right Side -->
+        <div class="right-panel">
+            <div class="login-card" id="loginCard">
+                <div class="form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your credentials to access your dashboard</p>
+                </div>
+
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username / Email</label>
+                        <input type="text" id="username" placeholder="Enter username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-wrapper">
+                            <label for="password">Password</label>
+                            <a href="#" class="forgot-link">Forgot Password?</a>
+                        </div>
+                        <div class="password-wrapper">
+                            <input type="password" id="password" placeholder="Enter password" required>
+                            <span class="password-toggle" data-target="password">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Sign In</button>
+
+                    <div class="form-footer">
+                        <p>Don't have an account? <a href="#" id="showRegister">Sign up</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registration Card (Hidden by default) -->
+            <div class="login-card" id="registerCard" style="display: none;">
+                <div class="form-header">
+                    <h2>Create Account</h2>
+                    <p>Join FAS Scholar to track your academic progress</p>
+                </div>
+
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="regUsername">Username</label>
+                        <input type="text" id="regUsername" placeholder="Choose a username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regEmail">Email Address</label>
+                        <input type="email" id="regEmail" placeholder="student@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regPassword">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="regPassword" placeholder="Create a password" required>
+                            <span class="password-toggle" data-target="regPassword">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Sign Up</button>
+
+                    <div class="form-footer">
+                        <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
